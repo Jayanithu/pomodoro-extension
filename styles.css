@@ -43,21 +43,6 @@ button:hover {
     border-radius: 5px;
 }
 
-#taskList {
-    text-align: left;
-    padding: 0;
-    list-style: none;
-}
-
-#taskList li {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-
 #stickyTimer {
     position: fixed;
     bottom: 10px;
