@@ -8,12 +8,41 @@
 </head>
 <body>
     <h1>Pomodoro Timer</h1>
-    <div class="timer">
-        <span id="minutes">25</span>:<span id="seconds">00</span>
+    
+    <div class="timer-container">
+        <svg class="progress-ring" width="120" height="120">
+            <circle class="progress-ring__circle" stroke="red" stroke-width="8" fill="transparent" r="50" cx="60" cy="60" />
+        </svg>
+        <div class="timer-text">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
     </div>
-    <button id="startPause">Start</button>
-    <button id="reset">Reset</button>
+    
+    <div class="controls">
+        <button id="startPause">Start</button>
+        <button id="reset">Reset</button>
+    </div>
+    
+    <div class="custom-time">
+        <label>Work Duration (mins):</label>
+        <input type="number" id="workDuration" value="25">
+        <label>Break Duration (mins):</label>
+        <input type="number" id="breakDuration" value="5">
+        <button id="saveSettings">Save</button>
+    </div>
+
+    <h2>Tasks</h2>
+    <ul id="taskList"></ul>
+    <input type="text" id="newTask" placeholder="Add a task...">
+    <button id="addTask">Add</button>
+
     <p>Completed Sessions: <span id="sessions">0</span></p>
+
+    <div id="stickyTimer" class="hidden">
+        <p>Time Left: <span id="stickyTime">25:00</span></p>
+        <button id="hideSticky">Hide</button>
+    </div>
+
     <script src="popup.js"></script>
 </body>
 </html>
